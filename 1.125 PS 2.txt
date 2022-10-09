@@ -1,0 +1,108 @@
+﻿Entities and Properties
+
+
+/*
+Entity:
+‘Books’
+
+
+Properties:
+ISBN (pk)
+Title
+AuthorID
+PublisherID
+Price
+Pages
+EditorID
+Royalty
+Genre
+*/
+
+
+/*
+Entity:
+‘Publishers’
+
+
+Properties:
+PublisherID (pk)
+PublisherName
+Address
+NumberBooksSold
+*/
+
+
+/*
+Entity:
+‘Authors’
+
+
+Properties:
+AuthorID (pk)
+Name
+Books
+*/
+
+
+/*
+Entity:
+‘Editors’
+
+
+Properties:
+EditorID (pk)
+Name
+Address
+*/
+
+
+/*
+Entity:
+‘Orders’
+
+
+Properties:
+OrderID (pk)
+OrderDate
+CustomerID
+ISBN
+*/
+
+
+/*
+Entity:
+‘Customers’
+
+
+Properties:
+CustomerID (pk)
+Name
+Phone number
+Address
+OrderID
+*/
+
+
+
+
+Unique Identifiers
+
+
+ISBN (pk)
+PublisherID (pk)
+AuthorID (pk)
+EditorID (pk)
+OrderID (pk)
+CustomerID (pk)
+
+
+
+
+Relationships
+
+
+Books, Authors, 1:N
+Books, Publishers, N:1
+Books, Editors, N:N
+Orders, Customers, N:1
+Books, Sales, N:N
